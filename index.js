@@ -72,6 +72,132 @@ const promptManager = () => {
 })
 };
 
+
+const addEngineer = () => {
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "What is your name?",
+        validate: (nameInput) => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log("try to remind your name");
+            return false;
+          }
+        },
+      },
+  
+      {
+        type: "input",
+        name: "engineerId",
+        message: "What is your ID?",
+        validate: (engineerId) => {
+          if (engineerId) {
+            return true;
+          } else {
+            console.log("try to remind your id");
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "engineerEmail",
+        message: "What is your email?",
+        validate: (engineerEmail) => {
+          if (engineerEmail) {
+            return true;
+          } else {
+            console.log("try to remind youremail");
+            return false;
+          }
+        },
+      },
+      {
+          type: "input",
+          name: "engineerGitHub",
+          message: "What is your office Number",
+          validate: (engineerGitHub) => {
+            if (engineerGitHub) {
+              return true;
+            } else {
+              console.log("try to remind your office Number");
+              return false;
+            }
+          },
+        },
+    ]).then(({name,engineerId,engineerEmail,engineerGitHub}) => {
+      const newHireEngineer = new Engineer(name,engineerId,engineerEmail,engineerGitHub)
+      teamMember.push(newHireEngineer)
+      addEmployees()
+  })
+  };
+
+const addIntern = () => {
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "What is your name?",
+        validate: (nameInput) => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log("try to remind your name");
+            return false;
+          }
+        },
+      },
+  
+      {
+        type: "input",
+        name: "internId",
+        message: "What is your ID?",
+        validate: (internId) => {
+          if (internId) {
+            return true;
+          } else {
+            console.log("try to remind your id");
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "internEmail",
+        message: "What is your email?",
+        validate: (internEmail) => {
+          if (internEmail) {
+            return true;
+          } else {
+            console.log("try to remind youremail");
+            return false;
+          }
+        },
+      },
+      {
+          type: "input",
+          name: "internSchoolName",
+          message: "What is your school name",
+          validate: (internSchoolName) => {
+            if (internSchoolName) {
+              return true;
+            } else {
+              console.log("try to remind your school name");
+              return false;
+            }
+          },
+        },
+    ]).then(({name,internId,internEmail,internSchoolName}) => {
+      const newHireIntern = new Intern(name,internId,internEmail,internSchoolName)
+      teamMember.push(newHireIntern)
+      addEmployees()
+
+  })
+  };
+
 const addEmployees = () => {
   inquirer.prompt([
     {
@@ -95,6 +221,8 @@ const addEmployees = () => {
 }
 
 
-
+const coWorker=()=>{
+    console.log(teamMember)
+}
 
 promptManager()
