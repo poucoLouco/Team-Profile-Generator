@@ -1,0 +1,27 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Backend app implementing OOPs concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poucoLouco/Team-Profile-Generator.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "inquirer"
+  ],
+  "author": "roksolana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poucoLouco/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/poucoLouco/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.4.0"
+  }
+}
