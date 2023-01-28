@@ -3,13 +3,37 @@ const fs = require("fs");
 const Engineer = require("./library/Enginner");
 const Intern = require("./library/Intern");
 const Manager = require("./library/Manager");
-const { ADDRGETNETWORKPARAMS } = require("dns");
+// const { ADDRGETNETWORKPARAMS } = require("dns");
 // const generateSite = require("ТРЕБА");
 // const path = require("path");
 // OUTPUT_DIR = path.resolve(__dirname, "output");
 // outputPath = path.join(OUTPUT_DIR, "team.html");
 const teamMember = [];
 
+const generateHTML = (answers) =>
+  `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./assets/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <title>PROFILE</title>
+    </head>
+    <body>
+  <header class="text-center"><h1>MY TEAM</h1></header>
+      <div class="container">
+        <h1 class="name">${answers.name}</h1>
+        <h3><span class="logo"><img src="https://img.icons8.com/bubbles/50/null/pokeball.png"/></span>${answers.name}</h3>
+        <ul class="list-group">
+          <li class="list-group-item">${answers.name}</li>
+          <li class="list-group-item">${answers.name}</li>
+          <li class="list-group-item"><a>${answers.name}</a></li>
+        </ul>
+      </div>
+    </html>`;
+inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 const promptManager = () => {
   inquirer.prompt([
     {
@@ -65,8 +89,10 @@ const promptManager = () => {
           }
         },
       },
-  ]).then(({name,employeeId,employeeEmail,employeeOfficeNumber}) => {
-    const newHireManager = new Manager(name,employeeId,employeeEmail,employeeOfficeNumber)
+
+  ]).then((answers) => {
+    const newHireManager = new Manager(answers.name,answers.employeeId,answers.employeeEmail,answers.employeeOfficeNumber)
+    console.log(newHireManager);
     teamMember.push(newHireManager)
     addEmployees()
 })

@@ -1,1 +1,33 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
+.container {
+ color:purple;
+ width: 300px;
+}
+
+.list-group {
+    width: 300px;
+    
+    
+}
+.text-center {
+    color: purple;
+    
+}
+
+header {
+background-color: rgb(251, 199, 103);
+}
+.fs-3 {
+    font-weight: 200;
+}
+.name {
+    width: 300px;
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+  .selector-for-some-widget {
+    box-sizing: content-box;
+  }
