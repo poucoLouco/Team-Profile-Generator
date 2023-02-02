@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Engineer = require("./library/Enginner");
+const Engineer = require("./library/Engineer");
 const Intern = require("./library/Intern");
 const Manager = require("./library/Manager");
 const generateTeamHtml = require("./template/index")

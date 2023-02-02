@@ -1,4 +1,4 @@
-const Engineer = require("../library/Engineer");
+const Engineer = require("../library/Engineer.js");
 
 test("Test Engineer to be an Object",function(){
     const testEngineer = new Engineer("ana",121,"ana@test.com",'testgit' )

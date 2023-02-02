@@ -4,7 +4,7 @@ A command-line application that accepts user input. HTML file is generated that 
 
 ## Usage
 
- ![alt text](assets/images/screenshot.png)
+ ![pageMyTeam](assets/img/myTeam.png)
 
 ## Built With
 
@@ -24,4 +24,4 @@ This project is licensed under the MIT License
 
 ## Tests
 
- ![alt text](assets/images/screenshot.png)
+ ![testMyTeam](assets/img/test.png)

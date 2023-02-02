@@ -1,4 +1,4 @@
-const Intern = require("../library/Intern");
+const Intern = require("../library/Intern.js");
 
 test("Test Intern to be an Object", function () {
   const testIntern = new Intern("ana", 121, "ana@test.com", "schoolName");
@@ -15,7 +15,7 @@ test("Test Intern Attributes name,id,email,school", function () {
 
 test("Test Intern methods - getRole, getName, getId, getEmail, getSchool", function () {
   const testIntern = new Intern("ana", 121, "ana@test.com", "schoolName");
-  expect(testIntern.getName()).toBe("ana");
+  expect(testIntern.getNAME()).toBe("ana");
   expect(testIntern.getId()).toBe(121);
   expect(testIntern.getEmail()).toBe("ana@test.com");
   expect(testIntern.getRole()).toBe("Intern");
