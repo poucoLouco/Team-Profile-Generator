@@ -3,7 +3,7 @@ const fs = require("fs");
 const Engineer = require("./library/Enginner");
 const Intern = require("./library/Intern");
 const Manager = require("./library/Manager");
-
+const generateTeamHtml = require("./template/index")
 const teamMember = [];
 
 const promptManager = () => {
@@ -220,7 +220,9 @@ const addEmployees = () => {
 
 
 const coWorker=()=>{
-    console.log(teamMember)
+   fs.writeFileSync("./OUTPUT/index.html",generateTeamHtml(teamMember),function(err,data){
+    if(err) throw err;
+   })
 }
 
 promptManager()
