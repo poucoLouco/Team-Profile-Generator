@@ -15,7 +15,7 @@ expect(testEngineer.Github).toBe("testgit")
 })
 
 
-test("Test Engineer methods - getrole getname,getid,getemai, getGithub",function(){
+test("Test Engineer methods - getRole, getName, getId, getEmail, getGithub",function(){
     const testEngineer = new Engineer("ana",121,"ana@test.com",'testgit' )
 expect(testEngineer.getNAME()).toBe("ana")
 expect(testEngineer.getId()).toBe(121)
