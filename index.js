@@ -200,7 +200,7 @@ const addEmployees = () => {
   inquirer.prompt([
     {
         type:"list",
-        choices:["Add Engineer","Add Intern","Generate HTML & exit"],
+        choices:["Add Engineer","Add Intern","Finish building my team"],
         message:"What would you like to do?",
         name:"menu"
     }
